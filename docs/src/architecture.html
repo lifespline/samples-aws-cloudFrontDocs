@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -197,7 +197,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -205,6 +205,16 @@
         <article role="main">
           <a href="https://github.com/lifespline/samples-aws-cloudFrontDocs.git"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a><section id="architecture">
 <h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading">#</a></h1>
+<p>Docstrings are extracted both from python docstrings and from typescript doctrings. It was not possible to use <cite>typedoc &lt;https://github.com/mozilla/sphinx-js&gt;</cite> to show both py and ts docstrings in the same static pages, so typedoc is building to <code class="docutils literal notranslate"><span class="pre">docs/typedoc</span></code>, whereas sphinx is building to <code class="docutils literal notranslate"><span class="pre">docs</span></code>. They are both published to AWS CloudFront.</p>
+<section id="s3">
+<h2>S3<a class="headerlink" href="#s3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>bucket name: <code class="docutils literal notranslate"><span class="pre">empower-insights-docs</span></code></p></li>
+</ul>
+</section>
+<section id="cloudfront">
+<h2>CloudFront<a class="headerlink" href="#cloudfront" title="Permalink to this heading">#</a></h2>
+</section>
 </section>
 
         </article>
@@ -252,8 +262,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Architecture</a><ul>
+<li><a class="reference internal" href="#s3">S3</a></li>
+<li><a class="reference internal" href="#cloudfront">CloudFront</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

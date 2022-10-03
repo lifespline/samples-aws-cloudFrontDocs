@@ -226,6 +226,15 @@
 <h2>Task Runner<a class="headerlink" href="#task-runner" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.pyinvoke.org/">invoke</a> is the task runner used to build the docs.</p>
 </section>
+<section id="pipeline">
+<h2>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this heading">#</a></h2>
+<p>The pipeline automates manual build processes like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ inv docs
+$ aws sso login --profile &lt;profile&gt;
+$ aws s3 cp --recursive docs s3://sample-aws-cloudfrontdocs-docs --profile  &lt;profile&gt;
+</pre></div>
+</div>
+</section>
 </section>
 
         </article>
@@ -289,6 +298,7 @@
 <li><a class="reference internal" href="#docs-structure">Docs Structure</a></li>
 <li><a class="reference internal" href="#images">Images</a></li>
 <li><a class="reference internal" href="#task-runner">Task Runner</a></li>
+<li><a class="reference internal" href="#pipeline">Pipeline</a></li>
 </ul>
 </li>
 </ul>

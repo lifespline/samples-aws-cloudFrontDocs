@@ -29,3 +29,14 @@ Task Runner
 -----------
 
 `invoke <https://www.pyinvoke.org/>`_ is the task runner used to build the docs.
+
+Pipeline
+--------
+
+The pipeline automates manual build processes like:
+
+.. code:: bash
+
+   $ inv docs
+   $ aws sso login --profile <profile>
+   $ aws s3 cp --recursive docs s3://sample-aws-cloudfrontdocs-docs --profile  <profile>

@@ -6,7 +6,7 @@
 Architecture
 ============
 
-Docstrings are extracted both from python docstrings and from typescript doctrings. It was not possible to use `typedoc <https://github.com/mozilla/sphinx-js>` to show both py and ts docstrings in the same static pages, so typedoc is building to ``docs/typedoc``, whereas sphinx is building to ``docs``. They are both published to AWS CloudFront.
+Docstrings are extracted both from python docstrings and from typescript doctrings. It was not possible to use `typedoc <https://github.com/mozilla/sphinx-js>`_ to show both py and ts docstrings in the same static pages, so typedoc is building to ``docs/typedoc``, whereas sphinx is building to ``docs``. They are both published to AWS CloudFront.
 
 S3
 --

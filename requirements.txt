@@ -1,0 +1,7 @@
+sphinx
+invoke
+furo
+nbsphinx-link
+
+# js/ts docs sphinx extension
+sphinx-js

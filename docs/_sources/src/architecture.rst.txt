@@ -21,19 +21,25 @@ S3 Bucket
 .. code-block:: json
 
    {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Sid": "Allow-OAI-Access-To-Bucket",
-                "Effect": "Allow",
-                "Principal": {
-                    "Service": "cloudfront.amazonaws.com"
-                },
-                "Action": "s3:GetObject",
-                "Resource": "arn:aws:s3:::sample-aws-cloudfrontdocs-docs/*"
-            }
-        ]
-    }
+       "Version": "2008-10-17",
+       "Id": "PolicyForCloudFrontPrivateContent",
+       "Statement": [
+           {
+               "Sid": "AllowCloudFrontServicePrincipal",
+               "Effect": "Allow",
+               "Principal": {
+                   "Service": "cloudfront.amazonaws.com"
+               },
+               "Action": "s3:GetObject",
+               "Resource": "arn:aws:s3:::sample-aws-cloudfrontdocs-docs/*",
+               "Condition": {
+                   "StringEquals": {
+                       "AWS:SourceArn":    "arn:aws:cloudfront::<account>:distribution/<hash>"
+                   }
+               }
+           }
+       ]
+   }
 
 CloudFront
 ----------
@@ -44,6 +50,7 @@ CloudFront
     * control setting:
         * name: ``sample-aws-cloudfrontdocs-docs.s3.<region>.amazonaws.com``
         * sign requests: ``Yes``
+* enable origin shield: ``No`` (improve the cache hit ratio of your CloudFront distribution)
 
 Docs
 ----

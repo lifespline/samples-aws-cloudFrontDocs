@@ -34,10 +34,11 @@ Task Runner
 Pipeline
 --------
 
-The pipeline automates manual build processes like:
+The pipeline automates manual build processes like (specifying the AWS profile):
 
 .. code:: bash
 
    $ inv docs
-   $ aws sso login --profile <profile>
-   $ aws s3 cp --recursive docs s3://sample-aws-cloudfrontdocs-docs --profile  <profile>
+   $ aws sso login
+   $ aws cloudfront create-invalidation --distribution-id <id> --paths "/*"
+   $ aws s3 cp --recursive docs s3://sample-aws-cloudfrontdocs-docs

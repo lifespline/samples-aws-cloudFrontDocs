@@ -7,3 +7,4 @@ Literature
 ==========
 
 * `How do I use CloudFront to serve a static website hosted on Amazon S3? <https://www.youtube.com/watch?v=_JMf1mMjbMQ>`
+* `Docs: CloudFront Caching <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cache-hit-ratio-explained.html>`_

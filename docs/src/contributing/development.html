@@ -228,10 +228,11 @@
 </section>
 <section id="pipeline">
 <h2>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this heading">#</a></h2>
-<p>The pipeline automates manual build processes like:</p>
+<p>The pipeline automates manual build processes like (specifying the AWS profile):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ inv docs
-$ aws sso login --profile &lt;profile&gt;
-$ aws s3 cp --recursive docs s3://sample-aws-cloudfrontdocs-docs --profile  &lt;profile&gt;
+$ aws sso login
+$ aws cloudfront create-invalidation --distribution-id &lt;id&gt; --paths <span class="s2">&quot;/*&quot;</span>
+$ aws s3 cp --recursive docs s3://sample-aws-cloudfrontdocs-docs
 </pre></div>
 </div>
 </section>

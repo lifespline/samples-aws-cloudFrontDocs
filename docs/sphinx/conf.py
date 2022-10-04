@@ -5,8 +5,7 @@
 
 import os
 import sys
-# task runner docs
-sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath('../..')) # task runner docs
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -23,7 +22,7 @@ extensions = [
     # display docs build time
     'sphinx.ext.duration',
 
-    # process docstrings in src
+    # process python docstrings in src
     'sphinx.ext.autodoc',
 
     # test code snippets

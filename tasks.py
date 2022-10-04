@@ -17,8 +17,7 @@ def docs(ctx, step='build'):
             "cd docs/sphinx",
             "make html",
             "cp -a _build/html/. ..",
-            "make clean",
-            "echo && echo && echo && echo Your static documentation pages can be found at \'docs\' \(Ctrl+Click\) && echo",
+            "make clean"
         ]
     elif step == 'clean':
         cmds = [
